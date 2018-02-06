@@ -38,7 +38,7 @@ LRESULT CALLBACK melter(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
 	}
 	return DefWindowProc(hWnd, msg, wParam, lParam);
 }
-int APIENTRY WinMain(HINSTANCE Inst, HINSTANCE Prev, LPSTR cmd, int showcmd) {
+int WINAPI WinMain(HINSTANCE Inst, HINSTANCE Prev, LPSTR cmd, int showcmd) {
 	ScreenWidth = GetSystemMetrics(SM_CXSCREEN);
 	ScreenHeight = GetSystemMetrics(SM_CYSCREEN);
 	WNDCLASS wndClass = { 0, melter,0,0,Inst,0,LoadCursor(0,IDC_ARROW),0,0,"ScreenMelter"};
